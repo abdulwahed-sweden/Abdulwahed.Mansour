@@ -1,0 +1,6 @@
+# Keep the build scripts (build.mjs, build-letters.mjs, package*.json) tracked.
+# Ignore dependencies and intermediate render artifacts.
+node_modules/
+html/
+html-letters/
+tmp/
