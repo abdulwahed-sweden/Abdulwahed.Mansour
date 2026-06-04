@@ -1,0 +1,16 @@
+{
+  "name": "Abdulwahed Mansour — Software, Security & Systems Engineer",
+  "short_name": "A. Mansour",
+  "description": "Software, security and systems engineer in Stockholm. Role-targeted CVs and cover letters.",
+  "lang": "en",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#574fec",
+  "icons": [
+    { "src": "/assets/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/assets/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
