@@ -36,6 +36,10 @@ I build business systems in **Rust** that a company runs as **one binary** — o
 
 ---
 
+## Other Rust
+
+**ferox** — a Rust-native offensive-security framework · **robotics-platform** — a 14-crate control stack (analytic IK, motion planning, sim↔hardware). *Both public on GitHub.*
+
 ## Stack
 
 Rust · Tokio · Axum · Serde · PostgreSQL · Docker · GitHub Actions CI
