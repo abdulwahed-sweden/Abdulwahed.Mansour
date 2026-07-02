@@ -13,9 +13,11 @@ mkdirSync(PDF_DIR, { recursive: true });
 
 const CHROME = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 
-// Cover-letter sources are archived under cv/archive/cover-letters/ for now.
-// Add entries here (source in cv/cover-letters/) to build a letter.
-const JOBS = [];
+// Main cover letter. Older role-specific letters are archived under
+// cv/archive/cover-letters/ (add them here to rebuild them).
+const JOBS = [
+  ['main.md', 'Abdulwahed-Mansour-Cover-Letter-Rust-Engineer.pdf'],
+];
 
 marked.setOptions({ gfm: true, breaks: true });
 
