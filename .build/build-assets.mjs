@@ -35,7 +35,7 @@ shot('og-image', 1200, 630, `
     <div class="name">Abdulwahed Mansour</div>
     <div class="role">Software · Security · Systems Engineer</div>
     <div class="loc">Stockholm, Sweden</div>
-    <div class="stats">15+ yrs &nbsp;·&nbsp; 208K+ LOC &nbsp;·&nbsp; 5,700+ tests &nbsp;·&nbsp; $140K+ bounties</div>
+    <div class="stats">15+ yrs &nbsp;·&nbsp; 208K+ LOC &nbsp;·&nbsp; 5,700+ tests &nbsp;·&nbsp; zero unsafe</div>
     <div class="url">abdulwahed-mansour.dev &nbsp;·&nbsp; github.com/abdulwahed-sweden</div>
   </div>`, `
   .card{width:1200px;height:630px;background:

@@ -179,7 +179,7 @@ h1{font-size:clamp(46px,7.5vw,72px);line-height:1.03;font-weight:800;letter-spac
 .btn.primary:hover{background:var(--primary-d);color:#fff;box-shadow:0 10px 26px rgba(87,79,236,.36)}
 
 /* stats */
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin:44px 0;padding:34px;background:var(--g100);border:1px solid var(--line);border-radius:var(--radius-lg);box-shadow:var(--shadow-soft)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:44px 0;padding:34px;background:var(--g100);border:1px solid var(--line);border-radius:var(--radius-lg);box-shadow:var(--shadow-soft)}
 .stat b{display:block;font-size:clamp(30px,4.4vw,44px);font-weight:800;color:var(--primary);line-height:1;letter-spacing:-1px}
 .stat span{display:block;font-size:16px;color:var(--muted);margin-top:8px;font-weight:500}
 
@@ -227,7 +227,7 @@ footer{border-top:1px solid var(--line);margin-top:30px;padding:38px 0 60px;font
     <p class="tagline">Software, Security &amp; Systems Engineer</p>
     <p class="lede">15+ years building production systems in <strong>Python</strong> and <strong>Rust</strong> — including <strong>RustIO</strong>, my "Django-for-Rust" web + admin framework, with real business systems shipped on it. I also work across cloud infrastructure, offensive-security tooling, and DeFi/blockchain security, owning systems end-to-end with the attack surface in mind from day one.</p>
     <div class="cta">
-      <a class="btn primary" href="#cvs">View CVs &amp; cover letters</a>
+      <a class="btn primary" href="#cvs">View CV &amp; cover letter</a>
       <a class="btn" href="mailto:abdulwahed.mansour@gmail.com">Email</a>
       <a class="btn" href="https://github.com/abdulwahed-sweden" rel="me noopener">GitHub</a>
       <a class="btn" href="https://linkedin.com/in/abdulwahed-sweden" rel="me noopener">LinkedIn</a>
@@ -238,21 +238,13 @@ footer{border-top:1px solid var(--line);margin-top:30px;padding:38px 0 60px;font
     <div class="stat"><b>15+</b><span>years experience</span></div>
     <div class="stat"><b>208K+</b><span>lines of code</span></div>
     <div class="stat"><b>5,700+</b><span>automated tests</span></div>
-    <div class="stat"><b>$140K+</b><span>security bounties</span></div>
   </div>
 
   <section id="cvs">
-    <h2>CVs &amp; cover letters by role</h2>
-    <p class="sec-intro">Each role has a tailored CV and a matching cover letter, ready to download as a PDF.</p>
+    <h2>CV &amp; cover letter</h2>
+    <p class="sec-intro">Download my CV and a matching cover letter as a PDF.</p>
     <div class="grid">
-      <article class="card"><h3>Backend / Software Engineer</h3><p>Python, Django, FastAPI, REST APIs, PostgreSQL, concurrency.</p><div class="links"><a class="dl" href="/cv/pdf/Abdulwahed-Mansour-Backend-Software-Engineer.pdf">CV (PDF)</a><a href="/cv/pdf/cover-letters/Abdulwahed-Mansour-Cover-Letter-Backend-Software-Engineer.pdf">Cover letter</a></div></article>
-      <article class="card"><h3>Platform / DevOps / SRE</h3><p>Docker, CI/CD, AWS/GCP/Azure, reliability &amp; hardening.</p><div class="links"><a class="dl" href="/cv/pdf/Abdulwahed-Mansour-Platform-DevOps-SRE.pdf">CV (PDF)</a><a href="/cv/pdf/cover-letters/Abdulwahed-Mansour-Cover-Letter-Platform-DevOps-SRE.pdf">Cover letter</a></div></article>
-      <article class="card"><h3>Security / AppSec Engineer</h3><p>Rust security tooling, audits, forensics, $140K+ bounties.</p><div class="links"><a class="dl" href="/cv/pdf/Abdulwahed-Mansour-Security-AppSec-Engineer.pdf">CV (PDF)</a><a href="/cv/pdf/cover-letters/Abdulwahed-Mansour-Cover-Letter-Security-AppSec-Engineer.pdf">Cover letter</a></div></article>
-      <article class="card"><h3>Rust / Systems Engineer</h3><p>Author of RustIO (Django-for-Rust framework); Tokio, Axum, async, zero-unsafe · 115K+ LOC.</p><div class="links"><a class="dl" href="/cv/pdf/Abdulwahed-Mansour-Rust-Systems-Engineer.pdf">CV (PDF)</a><a href="/cv/pdf/cover-letters/Abdulwahed-Mansour-Cover-Letter-Rust-Systems-Engineer.pdf">Cover letter</a></div></article>
-      <article class="card"><h3>Full Stack / Web Developer</h3><p>React, TypeScript, Tailwind + Django/FastAPI, end-to-end.</p><div class="links"><a class="dl" href="/cv/pdf/Abdulwahed-Mansour-Full-Stack-Web-Developer.pdf">CV (PDF)</a><a href="/cv/pdf/cover-letters/Abdulwahed-Mansour-Cover-Letter-Full-Stack-Web-Developer.pdf">Cover letter</a></div></article>
-      <article class="card"><h3>Blockchain / Smart Contract</h3><p>Solidity, Foundry, Solana/Anchor, DeFi protocol &amp; audits.</p><div class="links"><a class="dl" href="/cv/pdf/Abdulwahed-Mansour-Blockchain-Smart-Contract.pdf">CV (PDF)</a><a href="/cv/pdf/cover-letters/Abdulwahed-Mansour-Cover-Letter-Blockchain-Smart-Contract.pdf">Cover letter</a></div></article>
-      <article class="card"><h3>IT Support / Solutions</h3><p>Multi-OS, cloud, databases, multilingual customer support.</p><div class="links"><a class="dl" href="/cv/pdf/Abdulwahed-Mansour-IT-Support-Solutions.pdf">CV (PDF)</a><a href="/cv/pdf/cover-letters/Abdulwahed-Mansour-Cover-Letter-IT-Support-Solutions.pdf">Cover letter</a></div></article>
-      <article class="card"><h3>Technical Writer / Translator</h3><p>API docs, runbooks, localization, Arabic↔English.</p><div class="links"><a class="dl" href="/cv/pdf/Abdulwahed-Mansour-Technical-Writer-Translator.pdf">CV (PDF)</a><a href="/cv/pdf/cover-letters/Abdulwahed-Mansour-Cover-Letter-Technical-Writer-Translator.pdf">Cover letter</a></div></article>
+      <article class="card"><h3>Rust Engineer — business systems on RustIO</h3><p>Rust + rustio-admin — single-binary business systems for the Swedish / EU market.</p><div class="links"><a class="dl" href="/cv/pdf/Abdulwahed-Mansour-Rust-Engineer.pdf">CV (PDF)</a><a href="/cv/pdf/cover-letters/Abdulwahed-Mansour-Cover-Letter-Rust-Engineer.pdf">Cover letter</a></div></article>
     </div>
   </section>
 

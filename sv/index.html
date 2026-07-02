@@ -159,7 +159,7 @@ h1{font-size:clamp(46px,7.5vw,72px);line-height:1.03;font-weight:800;letter-spac
 .btn:hover{border-color:var(--primary);color:var(--primary);transform:translateY(-2px)}
 .btn.primary{background:var(--primary);border-color:var(--primary);color:#fff;box-shadow:0 6px 18px rgba(87,79,236,.28)}
 .btn.primary:hover{background:var(--primary-d);color:#fff;box-shadow:0 10px 26px rgba(87,79,236,.36)}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin:44px 0;padding:34px;background:var(--g100);border:1px solid var(--line);border-radius:var(--radius-lg);box-shadow:var(--shadow-soft)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:44px 0;padding:34px;background:var(--g100);border:1px solid var(--line);border-radius:var(--radius-lg);box-shadow:var(--shadow-soft)}
 .stat b{display:block;font-size:clamp(30px,4.4vw,44px);font-weight:800;color:var(--primary);line-height:1;letter-spacing:-1px}
 .stat span{display:block;font-size:16px;color:var(--muted);margin-top:8px;font-weight:500}
 section{padding:46px 0}
@@ -198,7 +198,7 @@ footer{border-top:1px solid var(--line);margin-top:30px;padding:38px 0 60px;font
     <p class="tagline">Mjukvaru-, säkerhets- &amp; systemingenjör</p>
     <p class="lede">15+ års erfarenhet av att bygga produktionssystem i <strong>Python</strong> och <strong>Rust</strong> — inklusive <strong>RustIO</strong>, mitt «Django-för-Rust»-ramverk för webb + admin, med riktiga affärssystem byggda på det. Jag arbetar även med molninfrastruktur, offensiva säkerhetsverktyg och DeFi/blockkedjesäkerhet, äger system från början till slut och designar med attackytan i åtanke redan från dag ett.</p>
     <div class="cta">
-      <a class="btn primary" href="#cvs">Visa CV:n &amp; personliga brev</a>
+      <a class="btn primary" href="#cvs">Visa CV &amp; personligt brev</a>
       <a class="btn" href="mailto:abdulwahed.mansour@gmail.com">E-post</a>
       <a class="btn" href="https://github.com/abdulwahed-sweden" rel="me noopener">GitHub</a>
       <a class="btn" href="https://linkedin.com/in/abdulwahed-sweden" rel="me noopener">LinkedIn</a>
@@ -209,21 +209,13 @@ footer{border-top:1px solid var(--line);margin-top:30px;padding:38px 0 60px;font
     <div class="stat"><b>15+</b><span>års erfarenhet</span></div>
     <div class="stat"><b>208K+</b><span>kodrader</span></div>
     <div class="stat"><b>5 700+</b><span>automatiska tester</span></div>
-    <div class="stat"><b>$140K+</b><span>säkerhetsbelöningar</span></div>
   </div>
 
   <section id="cvs">
-    <h2>CV:n &amp; personliga brev per roll</h2>
-    <p class="sec-intro">Varje roll har ett anpassat CV och ett matchande personligt brev, redo att laddas ner som PDF.</p>
+    <h2>CV &amp; personligt brev</h2>
+    <p class="sec-intro">Ladda ner mitt CV och ett matchande personligt brev som PDF.</p>
     <div class="grid">
-      <article class="card"><h3>Backend-/mjukvaruutvecklare</h3><p>Python, Django, FastAPI, REST-API:er, PostgreSQL, samtidighet.</p><div class="links"><a class="dl" href="/cv/pdf/Abdulwahed-Mansour-Backend-Software-Engineer.pdf">CV (PDF)</a><a href="/cv/pdf/cover-letters/Abdulwahed-Mansour-Cover-Letter-Backend-Software-Engineer.pdf">Personligt brev</a></div></article>
-      <article class="card"><h3>Platform / DevOps / SRE</h3><p>Docker, CI/CD, AWS/GCP/Azure, tillförlitlighet &amp; härdning.</p><div class="links"><a class="dl" href="/cv/pdf/Abdulwahed-Mansour-Platform-DevOps-SRE.pdf">CV (PDF)</a><a href="/cv/pdf/cover-letters/Abdulwahed-Mansour-Cover-Letter-Platform-DevOps-SRE.pdf">Personligt brev</a></div></article>
-      <article class="card"><h3>Säkerhetsingenjör / AppSec</h3><p>Säkerhetsverktyg i Rust, granskningar, forensik, $140K+ belöningar.</p><div class="links"><a class="dl" href="/cv/pdf/Abdulwahed-Mansour-Security-AppSec-Engineer.pdf">CV (PDF)</a><a href="/cv/pdf/cover-letters/Abdulwahed-Mansour-Cover-Letter-Security-AppSec-Engineer.pdf">Personligt brev</a></div></article>
-      <article class="card"><h3>Rust-/systemingenjör</h3><p>Skapare av RustIO («Django-för-Rust»); Tokio, Axum, async, noll «unsafe» · 115K+ rader.</p><div class="links"><a class="dl" href="/cv/pdf/Abdulwahed-Mansour-Rust-Systems-Engineer.pdf">CV (PDF)</a><a href="/cv/pdf/cover-letters/Abdulwahed-Mansour-Cover-Letter-Rust-Systems-Engineer.pdf">Personligt brev</a></div></article>
-      <article class="card"><h3>Fullstack-/webbutvecklare</h3><p>React, TypeScript, Tailwind + Django/FastAPI, hela kedjan.</p><div class="links"><a class="dl" href="/cv/pdf/Abdulwahed-Mansour-Full-Stack-Web-Developer.pdf">CV (PDF)</a><a href="/cv/pdf/cover-letters/Abdulwahed-Mansour-Cover-Letter-Full-Stack-Web-Developer.pdf">Personligt brev</a></div></article>
-      <article class="card"><h3>Blockkedja / smarta kontrakt</h3><p>Solidity, Foundry, Solana/Anchor, DeFi-protokoll &amp; granskningar.</p><div class="links"><a class="dl" href="/cv/pdf/Abdulwahed-Mansour-Blockchain-Smart-Contract.pdf">CV (PDF)</a><a href="/cv/pdf/cover-letters/Abdulwahed-Mansour-Cover-Letter-Blockchain-Smart-Contract.pdf">Personligt brev</a></div></article>
-      <article class="card"><h3>IT-support / Solutions</h3><p>Multi-OS, moln, databaser, flerspråkig kundsupport.</p><div class="links"><a class="dl" href="/cv/pdf/Abdulwahed-Mansour-IT-Support-Solutions.pdf">CV (PDF)</a><a href="/cv/pdf/cover-letters/Abdulwahed-Mansour-Cover-Letter-IT-Support-Solutions.pdf">Personligt brev</a></div></article>
-      <article class="card"><h3>Teknisk skribent / översättare</h3><p>API-dokumentation, runbooks, lokalisering, arabiska↔engelska.</p><div class="links"><a class="dl" href="/cv/pdf/Abdulwahed-Mansour-Technical-Writer-Translator.pdf">CV (PDF)</a><a href="/cv/pdf/cover-letters/Abdulwahed-Mansour-Cover-Letter-Technical-Writer-Translator.pdf">Personligt brev</a></div></article>
+      <article class="card"><h3>Rust-ingenjör — affärssystem på RustIO</h3><p>Rust + rustio-admin — affärssystem som en enda binär, för den svenska / EU-marknaden.</p><div class="links"><a class="dl" href="/cv/pdf/Abdulwahed-Mansour-Rust-Engineer.pdf">CV (PDF)</a><a href="/cv/pdf/cover-letters/Abdulwahed-Mansour-Cover-Letter-Rust-Engineer.pdf">Personligt brev</a></div></article>
     </div>
   </section>
 
