@@ -8,7 +8,7 @@ Stockholm, Sweden · +46 76 930 8145 · abdulwahed.mansour@gmail.com
 ---
 
 ## Summary
-Engineer who ships and *operates* what they build. 15+ years across backend development and the infrastructure that runs it — containers, CI/CD, multi-cloud, and production hardening. I've taken systems from local dev to live deployment on AWS/GCP/Azure and Base L2 mainnet, with circuit breakers, process supervision, and alerting wired in. I also attack operational complexity at the source: I authored **RustIO**, a Rust web/admin framework whose apps deploy as a **single binary with no build step and no frontend pipeline**, backed by one Postgres source of truth with a built-in audit trail. Security-research background means hardening and least-privilege are defaults, not afterthoughts. I optimise for reliability you can reason about: deterministic deploys, observable systems, and graceful degradation.
+Engineer who ships and *operates* what they build, and attacks operational complexity at the source. I authored **RustIO**, a Rust web/admin framework whose apps deploy as a **single binary — no build step, no frontend pipeline** — backed by one Postgres source of truth with a built-in audit trail, which collapses a whole multi-service web stack into one artifact to run, monitor, and secure. On top of that: 15+ years across containers, CI/CD, multi-cloud, and production hardening, taking systems from local dev to live deployment on AWS/GCP/Azure and Base L2 mainnet, with circuit breakers, process supervision, and alerting wired in. Security-research background means hardening and least-privilege are defaults, not afterthoughts. I optimise for reliability you can reason about: deterministic deploys, observable systems, and graceful degradation.
 
 ## Technical Skills
 | Area | Technologies |
@@ -21,7 +21,7 @@ Engineer who ships and *operates* what they build. 15+ years across backend deve
 | Reliability | circuit breakers, rate limiting, graceful degradation, exponential-backoff retries, health checks |
 | Observability | structured logging, performance tuning, debugging under load |
 | Hardening | SSH lockdown, UFW firewall, fail2ban, HSTS, secrets handling, least-privilege |
-| Languages | Python, Rust, Bash, SQL — automation & tooling |
+| Languages | Rust, Python, Bash, SQL — automation & tooling |
 | Data infra | PostgreSQL 16, Redis, Elasticsearch — operations, migrations, query tuning |
 
 ## Experience
@@ -31,11 +31,11 @@ Built and operated CI/CD pipelines, containerized deployments, and hardened clou
 Server hardening and infrastructure threat modeling as a discipline.
 
 ## Selected Projects
-**HuntLoan — Production Bot on Base Mainnet** · *Rust · alloy · PM2 · deployed*
-- Live 24/7 service with **progressive DRY→SOFT→LIVE deployment**, circuit breaker, Telegram alerting, and PM2 supervision; full server hardening (SSH, UFW, fail2ban). End-to-end ops ownership of a money-handling production system.
-
 **RustIO / SystemKraft — Single-Binary Deployment Model** · *Rust · rustio-admin · PostgreSQL*
 - Framework (authored) whose apps ship as **one statically-linked binary — no build step, no Node/frontend pipeline** to run in CI or on the box. SystemKraft runs a public site + audited `/admin` CRM from that single binary against one Postgres source of truth, with a built-in audit trail and re-auth-gated destructive actions — a radically smaller operational and attack surface than a multi-service web stack.
+
+**HuntLoan — Production Bot on Base Mainnet** · *Rust · alloy · PM2 · deployed*
+- Live 24/7 Rust service with **progressive DRY→SOFT→LIVE deployment**, circuit breaker, Telegram alerting, and PM2 supervision; full server hardening (SSH, UFW, fail2ban). End-to-end ops ownership of a money-handling production system.
 
 **RentQ — CI/CD & Multi-Service Stack** · *Docker Compose · GitHub Actions · PostgreSQL · Redis · Elasticsearch · 177 tests*
 - 5 parallel CI jobs; multi-service Docker Compose (DB, cache, search, workers); 5-tier rate limiting; HMAC-signed webhooks with exponential backoff (5 min → 7 days); search layer with automatic fallback (zero downtime).
