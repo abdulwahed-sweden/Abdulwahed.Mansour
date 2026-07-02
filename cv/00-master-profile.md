@@ -25,6 +25,7 @@ Arabic (native) · English (professional) · Swedish (working — verify level) 
 ## Headline numbers (verified from portfolio)
 - 15+ years building software · independent since 2010
 - ~208,000 LOC across 35+ original projects · 5,700+ automated tests
+- **Author of RustIO** — a "Django-for-Rust" web + admin framework (typed core, guided CLI, single-binary deploy, no build step) with real business apps built on it for the Swedish market
 - Security: $98.6M+ vulnerability *class* (ADS) across Aave V4, Morpho Blue, Curve crvUSD · $140K+ confirmed bounties
 - Forensics: traced the $1.5B Bybit/Lazarus theft (42,479 addresses) in 36 seconds
 - Deployments: AWS, GCP, Azure, Hugging Face Spaces, Base L2 mainnet
@@ -35,7 +36,8 @@ Arabic (native) · English (professional) · Swedish (working — verify level) 
 
 **Languages:** Rust, Python 3.12, TypeScript/Node.js, Solidity, SQL, Bash, (Zig basics)
 **Backend:** Django 5.x, DRF, FastAPI, Celery, SQLAlchemy 2.0, Pydantic, REST API design, microservices
-**Systems:** Rust (Tokio, Axum, Clap, Ratatui), PyO3 FFI, zero-copy/zero-alloc hot paths, concurrency control, async runtimes
+**Systems:** Rust (Tokio, Axum, Clap, Ratatui, Rayon, Serde), PyO3 FFI, WASM, zero-copy/zero-alloc hot paths, concurrency control, async runtimes, single-binary distribution
+**Rust frameworks (authored):** RustIO (web + admin framework, Django-for-Rust) — typed core, derive macros, guided CLI (NL→schema), Postgres-first admin with auth/sessions/RBAC/audit as one system, single-binary deploy, no build step
 **Frontend/Web:** React 18, Vue.js, Next.js, Tailwind CSS, Vite, Tauri 2.0, HTML/CSS/SCSS
 **Data:** PostgreSQL 16, MySQL, Redis, Elasticsearch, SQLite — schema design, query optimization, row-level locking, migrations, full-text/fuzzy search
 **Cloud/DevOps:** Docker, Docker Compose, GitHub Actions CI/CD, AWS, GCP, Azure, Terraform, Gunicorn, Nginx, PM2, server hardening (SSH/UFW/fail2ban), observability/logging
@@ -48,6 +50,47 @@ Arabic (native) · English (professional) · Swedish (working — verify level) 
 ---
 
 ## Project library (the raw evidence — each CV picks the most relevant 4–6)
+
+> **Rust flagship — the RustIO ecosystem.** A framework *and* the products built on it.
+> This is the strongest "what I can build for a company" story: infrastructure I own,
+> proven by shipping real business systems on top of it. GitHub: `abdulwahed-sweden`.
+
+### RustIO — "Django-for-Rust" Web + Admin Framework (beta)
+*Rust 1.75+ · Axum · Tokio · PostgreSQL · workspace crates (rustio-core / rustio-cli / rustio-admin / rustio-admin-cli)*
+You describe your data as plain Rust structs; RustIO returns a working admin UI, database, auth system, and HTTP server — Django's idea, on a strict typed core so schema changes stay safe-by-construction. Guided CLI setup turns a one-sentence brief into a reviewed schema (NL→schema via Claude, in `rustio-draft`), shows a plain-English blueprint before writing files, then generates migrations. **Single-binary deployment, no build step, no frontend build step.** Companion `rustio-design` compiles a declarative spec to a doctrine-validated `tokens.css` design system.
+
+### rustio-admin — Postgres-First Admin Framework (v0.7)
+*Rust · Axum · PostgreSQL · derive macros*
+The "Rust answer to Django Admin," but with *authority designed as one system*, not bolted on: authentication, sessions, password recovery, role-based access, and a complete audit trail governed by checked-in contract documents. An admin surface is one derive + one impl + one register call. Security substrate: TOTP MFA + single-use Argon2id-hashed backup codes, re-auth wall on every destructive action, per-request `correlation_id` audit chain, centralised session invalidation, 5-tier role hierarchy, account lockout + auto-throttle. Postgres only, single binary, no build step.
+
+### SystemKraft — Business-Systems Engineering for Swedish Enterprises (rustio-admin app)
+*Rust · rustio-admin · PostgreSQL*
+Both a marketing site *and* a live demo of the stack it sells: multi-page public site + fully-audited `/admin` CRM from **one Rust binary**. Six FK-wired models (ServiceCategory→Service→CaseStudy, Client→Engagement, Inquiry); CSRF-protected lead form; read-only dashboard with live Postgres figures. Positioned as: memory-safe Rust core, one Postgres source of truth, complete audit trail, single-binary deploy — the exact qualities on offer, running live.
+
+### Lursystem — EU Whistleblower-Compliance System (rustio-admin app, in development)
+*Rust · rustio-admin 0.7 · PostgreSQL*
+Self-hosted whistleblower-reporting + case-handling for Swedish employers, built for the EU Whistleblower Directive (2019/1937) → Swedish **lag (2021:890)**; every Swedish employer with 50+ staff must run an internal reporting channel. Data stays on the employer's own server, in-country, behind their own audit chain (vs. third-party SaaS). Domain schema: Report (anonymous-capable) → Case (intake→triage→investigating→resolved→archived) → CaseAction audit overlay, Document (retention + virus-scan hook), Disclosure (re-auth-gated, irreversible identity reveal); 4-role hierarchy. *Framework substrate published; domain code on the roadmap.*
+
+### RustIO demo apps — clinicflow · obddesk · shop
+*Rust · rustio-admin · PostgreSQL*
+Vertical demos proving the framework across domains: **clinicflow** (clinic — Patient/Appointment with FK + real `/admin`), **obddesk** (OBD-II diagnostics operator workstation — DTC catalogue, vehicles, scan sessions, faults), **shop** (store admin — 9 typed Postgres models, custom dashboard, live homepage, re-runnable seed data).
+
+### Polaris Chronos — Universal Prayer-Time Engine (live on HF Spaces)
+*Rust 2021 · WASM · REST API · 96 tests · v1.0.0*
+High-precision solar-position engine computing prayer times for every location on Earth incl. polar regions (Polaris Protocol, Yallop moon-visibility criterion); ships a full web dashboard + RESTful API; deployed live on Hugging Face Spaces (Docker).
+
+### HuntKey — Intent-Based Sovereign Smart Account
+*Rust 1.85 · Solidity 0.8.28 · ERC-4337 account abstraction · 126 tests*
+Policy-enforced identity protocol: master key never touches the network; ephemeral session keys handle scoped ops via typed structured-data signing; every tx bound to its exact calldata hash, scoped by selector + value cap, validated through 15 on-chain checks (any failure reverts all). 4-layer defense-in-depth; recoverable identity, no blind signing, no long-lived execution keys.
+
+### Standalone Rust tools & services
+- **chthonic** — modular, async-first Rust penetration-testing framework (Metasploit-inspired; memory-safe, session mgmt, exploit + recon modules) — the lineage behind Ferox.
+- **swiftline** — minimal fast Rust CLI for HTTP + JSON; cross-platform, rustls TLS, stdin pipelines.
+- **rust-cli-toolkit** — modular CLI toolkit: file ops, network utils, task mgmt, interactive shell w/ auto-completion.
+- **axum-rust** — production Axum web app: dark/light themes, RTL/LTR i18n, component library, CI/CD.
+- **weather_api_rust** — high-performance Axum + Tokio REST API with MCP-protocol integration for Claude Code.
+- **deepseek-rust** — async Rust client library for the DeepSeek API: type-safe, automatic retries, builder pattern.
+- **rust-scraper-pro** — production-grade Rust web-scraping library: multi-source, processing pipelines, multiple output formats.
 
 ### JobFlow — Employment Management Platform
 *Django 5.0 · DRF · PostgreSQL · Celery · Redis · Twilio · Docker*
