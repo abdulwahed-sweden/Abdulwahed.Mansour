@@ -25,7 +25,7 @@ keyword clusters to mirror per family. Don't keyword-stuff; weave them into Skil
 ## 03 — Security / AppSec / Pentest / SOC
 `application security` `penetration testing` `threat modeling` `OWASP` `vulnerability`
 `secure coding` `code review` `SAST/DAST` `incident response` `SIEM`* `MITRE ATT&CK`
-`YARA` `forensics` `red team` `bug bounty` `CVE` `cryptography` `Rust` `Python`
+`YARA` `forensics` `red team` `CVE` `cryptography` `Rust` `Python`
 *SOC Analyst lean:* `log analysis` `detection` `alert triage` `threat intelligence`
 
 ## 04 — Rust / Systems / Performance
