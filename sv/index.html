@@ -27,10 +27,8 @@
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
 
-<!-- Fonts (HUI design system: Inter) -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<!-- Fonts (HUI design system: Inter, self-hosted — no third-party request) -->
+<link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 
 <!-- Open Graph -->
 <meta property="og:type" content="profile">
@@ -118,6 +116,11 @@
 </script>
 
 <style>
+/* Inter — self-hosted variable font (latin, all weights) */
+@font-face{
+  font-family:"Inter";font-style:normal;font-weight:100 900;font-display:swap;
+  src:url("/assets/fonts/inter-latin.woff2") format("woff2");
+}
 /* === HUI design tokens === */
 :root{
   --primary:#574fec; --primary-d:#4a43d6; --primary-soft:#eeedfd;
@@ -193,7 +196,7 @@ footer{border-top:1px solid var(--line);margin-top:30px;padding:38px 0 60px;font
     <span class="pin"><span class="dot"></span> Stockholm, Sverige · Arbetstillstånd i EU · hybrid &amp; distans</span>
     <h1>Abdulwahed Mansour</h1>
     <p class="tagline">Mjukvaru-, säkerhets- &amp; systemingenjör</p>
-    <p class="lede">15+ års erfarenhet av att bygga produktionssystem i <strong>Python</strong> och <strong>Rust</strong> — backend-plattformar, molninfrastruktur, offensiva säkerhetsverktyg och DeFi/blockkedjesäkerhet. Jag äger system från början till slut och designar med attackytan i åtanke redan från dag ett.</p>
+    <p class="lede">15+ års erfarenhet av att bygga produktionssystem i <strong>Python</strong> och <strong>Rust</strong> — inklusive <strong>RustIO</strong>, mitt «Django-för-Rust»-ramverk för webb + admin, med riktiga affärssystem byggda på det. Jag arbetar även med molninfrastruktur, offensiva säkerhetsverktyg och DeFi/blockkedjesäkerhet, äger system från början till slut och designar med attackytan i åtanke redan från dag ett.</p>
     <div class="cta">
       <a class="btn primary" href="#cvs">Visa CV:n &amp; personliga brev</a>
       <a class="btn" href="mailto:abdulwahed.mansour@gmail.com">E-post</a>
@@ -216,7 +219,7 @@ footer{border-top:1px solid var(--line);margin-top:30px;padding:38px 0 60px;font
       <article class="card"><h3>Backend-/mjukvaruutvecklare</h3><p>Python, Django, FastAPI, REST-API:er, PostgreSQL, samtidighet.</p><div class="links"><a class="dl" href="/cv/pdf/Abdulwahed-Mansour-Backend-Software-Engineer.pdf">CV (PDF)</a><a href="/cv/pdf/cover-letters/Abdulwahed-Mansour-Cover-Letter-Backend-Software-Engineer.pdf">Personligt brev</a></div></article>
       <article class="card"><h3>Platform / DevOps / SRE</h3><p>Docker, CI/CD, AWS/GCP/Azure, tillförlitlighet &amp; härdning.</p><div class="links"><a class="dl" href="/cv/pdf/Abdulwahed-Mansour-Platform-DevOps-SRE.pdf">CV (PDF)</a><a href="/cv/pdf/cover-letters/Abdulwahed-Mansour-Cover-Letter-Platform-DevOps-SRE.pdf">Personligt brev</a></div></article>
       <article class="card"><h3>Säkerhetsingenjör / AppSec</h3><p>Säkerhetsverktyg i Rust, granskningar, forensik, $140K+ belöningar.</p><div class="links"><a class="dl" href="/cv/pdf/Abdulwahed-Mansour-Security-AppSec-Engineer.pdf">CV (PDF)</a><a href="/cv/pdf/cover-letters/Abdulwahed-Mansour-Cover-Letter-Security-AppSec-Engineer.pdf">Personligt brev</a></div></article>
-      <article class="card"><h3>Rust-/systemingenjör</h3><p>Tokio, async, noll «unsafe», 115K+ rader Rust i produktion.</p><div class="links"><a class="dl" href="/cv/pdf/Abdulwahed-Mansour-Rust-Systems-Engineer.pdf">CV (PDF)</a><a href="/cv/pdf/cover-letters/Abdulwahed-Mansour-Cover-Letter-Rust-Systems-Engineer.pdf">Personligt brev</a></div></article>
+      <article class="card"><h3>Rust-/systemingenjör</h3><p>Skapare av RustIO («Django-för-Rust»); Tokio, Axum, async, noll «unsafe» · 115K+ rader.</p><div class="links"><a class="dl" href="/cv/pdf/Abdulwahed-Mansour-Rust-Systems-Engineer.pdf">CV (PDF)</a><a href="/cv/pdf/cover-letters/Abdulwahed-Mansour-Cover-Letter-Rust-Systems-Engineer.pdf">Personligt brev</a></div></article>
       <article class="card"><h3>Fullstack-/webbutvecklare</h3><p>React, TypeScript, Tailwind + Django/FastAPI, hela kedjan.</p><div class="links"><a class="dl" href="/cv/pdf/Abdulwahed-Mansour-Full-Stack-Web-Developer.pdf">CV (PDF)</a><a href="/cv/pdf/cover-letters/Abdulwahed-Mansour-Cover-Letter-Full-Stack-Web-Developer.pdf">Personligt brev</a></div></article>
       <article class="card"><h3>Blockkedja / smarta kontrakt</h3><p>Solidity, Foundry, Solana/Anchor, DeFi-protokoll &amp; granskningar.</p><div class="links"><a class="dl" href="/cv/pdf/Abdulwahed-Mansour-Blockchain-Smart-Contract.pdf">CV (PDF)</a><a href="/cv/pdf/cover-letters/Abdulwahed-Mansour-Cover-Letter-Blockchain-Smart-Contract.pdf">Personligt brev</a></div></article>
       <article class="card"><h3>IT-support / Solutions</h3><p>Multi-OS, moln, databaser, flerspråkig kundsupport.</p><div class="links"><a class="dl" href="/cv/pdf/Abdulwahed-Mansour-IT-Support-Solutions.pdf">CV (PDF)</a><a href="/cv/pdf/cover-letters/Abdulwahed-Mansour-Cover-Letter-IT-Support-Solutions.pdf">Personligt brev</a></div></article>
@@ -228,6 +231,7 @@ footer{border-top:1px solid var(--line);margin-top:30px;padding:38px 0 60px;font
     <h2>Kärnkompetenser</h2>
     <dl class="skills">
       <dt>Programmeringsspråk</dt><dd>Rust, Python, TypeScript/Node.js, Solidity, SQL, Bash</dd>
+      <dt>Rust</dt><dd>Tokio, Axum, Serde, PyO3; skapare av RustIO — ramverk för webb + admin, distribution som en binär</dd>
       <dt>Backend</dt><dd>Django, FastAPI, DRF, Celery, REST-API:er, PostgreSQL, Redis, Elasticsearch</dd>
       <dt>Moln / DevOps</dt><dd>Docker, GitHub Actions CI/CD, AWS, GCP, Azure, Terraform, Nginx</dd>
       <dt>Säkerhet</dt><dd>Applikationssäkerhet, penetrationstester, granskning av smarta kontrakt, forensik</dd>

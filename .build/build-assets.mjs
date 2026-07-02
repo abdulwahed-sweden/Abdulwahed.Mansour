@@ -1,7 +1,7 @@
 // Generates SEO/social image assets via Chrome headless screenshots.
 // Palette follows the HUI design system: Inter, primary #574fec, ink #1c0950.
 // Output -> repo/assets/  (og-image.png, icon-192/512.png, apple-touch-icon.png, favicon.svg)
-import { writeFileSync, mkdirSync, rmSync } from 'node:fs';
+import { writeFileSync, mkdirSync, rmSync, readdirSync, statSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { dirname, resolve, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -73,6 +73,41 @@ writeFileSync(join(ASSETS, 'favicon.svg'),
     font-family="Inter,Helvetica,Arial,sans-serif" font-size="29" font-weight="800" fill="#fff">AM</text>
 </svg>\n`);
 console.log('img: favicon.svg');
+
+// --- sitemap.xml (pages + every CV & cover-letter PDF; lastmod from file mtime) ---
+const SITE = 'https://abdulwahed-mansour.dev';
+const ymd = (p) => statSync(p).mtime.toISOString().slice(0, 10);
+const CVDIR = join(ROOT, 'cv', 'pdf');
+const CLDIR = join(CVDIR, 'cover-letters');
+const pdfUrls = (dir, sub, priority) =>
+  readdirSync(dir).filter((f) => f.endsWith('.pdf')).sort()
+    .map((f) => ({ loc: `${SITE}/cv/pdf/${sub}${f}`, lastmod: ymd(join(dir, f)), priority }));
+
+const urls = [
+  { loc: `${SITE}/`,    lastmod: ymd(join(ROOT, 'index.html')),       priority: '1.0', changefreq: 'monthly', alt: true },
+  { loc: `${SITE}/sv/`, lastmod: ymd(join(ROOT, 'sv', 'index.html')), priority: '0.9', changefreq: 'monthly', alt: true },
+  ...pdfUrls(CVDIR, '', '0.7'),
+  ...pdfUrls(CLDIR, 'cover-letters/', '0.6'),
+];
+
+const altBlock =
+  `\n    <xhtml:link rel="alternate" hreflang="en" href="${SITE}/"/>` +
+  `\n    <xhtml:link rel="alternate" hreflang="sv" href="${SITE}/sv/"/>` +
+  `\n    <xhtml:link rel="alternate" hreflang="x-default" href="${SITE}/"/>`;
+
+const body = urls.map((u) => {
+  const cf = u.changefreq ? `\n    <changefreq>${u.changefreq}</changefreq>` : '';
+  const alt = u.alt ? altBlock : '';
+  return `  <url>\n    <loc>${u.loc}</loc>\n    <lastmod>${u.lastmod}</lastmod>${cf}\n    <priority>${u.priority}</priority>${alt}\n  </url>`;
+}).join('\n');
+
+writeFileSync(join(ROOT, 'sitemap.xml'),
+`<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+${body}
+</urlset>\n`);
+console.log('gen: sitemap.xml', `(${urls.length} urls)`);
 
 rmSync(TMP, { recursive: true, force: true });
 console.log('Done ->', ASSETS);

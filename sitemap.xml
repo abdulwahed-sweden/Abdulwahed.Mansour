@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://abdulwahed-mansour.dev/</loc>
-    <lastmod>2026-06-04</lastmod>
+    <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://abdulwahed-mansour.dev/"/>
@@ -12,19 +12,91 @@
   </url>
   <url>
     <loc>https://abdulwahed-mansour.dev/sv/</loc>
-    <lastmod>2026-06-04</lastmod>
+    <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://abdulwahed-mansour.dev/"/>
     <xhtml:link rel="alternate" hreflang="sv" href="https://abdulwahed-mansour.dev/sv/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://abdulwahed-mansour.dev/"/>
   </url>
-  <url><loc>https://abdulwahed-mansour.dev/cv/pdf/Abdulwahed-Mansour-Backend-Software-Engineer.pdf</loc><lastmod>2026-06-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://abdulwahed-mansour.dev/cv/pdf/Abdulwahed-Mansour-Platform-DevOps-SRE.pdf</loc><lastmod>2026-06-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://abdulwahed-mansour.dev/cv/pdf/Abdulwahed-Mansour-Security-AppSec-Engineer.pdf</loc><lastmod>2026-06-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://abdulwahed-mansour.dev/cv/pdf/Abdulwahed-Mansour-Rust-Systems-Engineer.pdf</loc><lastmod>2026-06-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://abdulwahed-mansour.dev/cv/pdf/Abdulwahed-Mansour-Full-Stack-Web-Developer.pdf</loc><lastmod>2026-06-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://abdulwahed-mansour.dev/cv/pdf/Abdulwahed-Mansour-Blockchain-Smart-Contract.pdf</loc><lastmod>2026-06-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://abdulwahed-mansour.dev/cv/pdf/Abdulwahed-Mansour-IT-Support-Solutions.pdf</loc><lastmod>2026-06-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://abdulwahed-mansour.dev/cv/pdf/Abdulwahed-Mansour-Technical-Writer-Translator.pdf</loc><lastmod>2026-06-04</lastmod><priority>0.7</priority></url>
+  <url>
+    <loc>https://abdulwahed-mansour.dev/cv/pdf/Abdulwahed-Mansour-Backend-Software-Engineer.pdf</loc>
+    <lastmod>2026-07-02</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://abdulwahed-mansour.dev/cv/pdf/Abdulwahed-Mansour-Blockchain-Smart-Contract.pdf</loc>
+    <lastmod>2026-07-02</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://abdulwahed-mansour.dev/cv/pdf/Abdulwahed-Mansour-Full-Stack-Web-Developer.pdf</loc>
+    <lastmod>2026-07-02</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://abdulwahed-mansour.dev/cv/pdf/Abdulwahed-Mansour-IT-Support-Solutions.pdf</loc>
+    <lastmod>2026-07-02</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://abdulwahed-mansour.dev/cv/pdf/Abdulwahed-Mansour-Platform-DevOps-SRE.pdf</loc>
+    <lastmod>2026-07-02</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://abdulwahed-mansour.dev/cv/pdf/Abdulwahed-Mansour-Rust-Systems-Engineer.pdf</loc>
+    <lastmod>2026-07-02</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://abdulwahed-mansour.dev/cv/pdf/Abdulwahed-Mansour-Security-AppSec-Engineer.pdf</loc>
+    <lastmod>2026-07-02</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://abdulwahed-mansour.dev/cv/pdf/Abdulwahed-Mansour-Technical-Writer-Translator.pdf</loc>
+    <lastmod>2026-07-02</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://abdulwahed-mansour.dev/cv/pdf/cover-letters/Abdulwahed-Mansour-Cover-Letter-Backend-Software-Engineer.pdf</loc>
+    <lastmod>2026-07-02</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://abdulwahed-mansour.dev/cv/pdf/cover-letters/Abdulwahed-Mansour-Cover-Letter-Blockchain-Smart-Contract.pdf</loc>
+    <lastmod>2026-07-02</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://abdulwahed-mansour.dev/cv/pdf/cover-letters/Abdulwahed-Mansour-Cover-Letter-Full-Stack-Web-Developer.pdf</loc>
+    <lastmod>2026-07-02</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://abdulwahed-mansour.dev/cv/pdf/cover-letters/Abdulwahed-Mansour-Cover-Letter-IT-Support-Solutions.pdf</loc>
+    <lastmod>2026-07-02</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://abdulwahed-mansour.dev/cv/pdf/cover-letters/Abdulwahed-Mansour-Cover-Letter-Platform-DevOps-SRE.pdf</loc>
+    <lastmod>2026-07-02</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://abdulwahed-mansour.dev/cv/pdf/cover-letters/Abdulwahed-Mansour-Cover-Letter-Rust-Systems-Engineer.pdf</loc>
+    <lastmod>2026-07-02</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://abdulwahed-mansour.dev/cv/pdf/cover-letters/Abdulwahed-Mansour-Cover-Letter-Security-AppSec-Engineer.pdf</loc>
+    <lastmod>2026-07-02</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://abdulwahed-mansour.dev/cv/pdf/cover-letters/Abdulwahed-Mansour-Cover-Letter-Technical-Writer-Translator.pdf</loc>
+    <lastmod>2026-07-02</lastmod>
+    <priority>0.6</priority>
+  </url>
 </urlset>
