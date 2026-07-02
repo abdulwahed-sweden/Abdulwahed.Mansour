@@ -13,16 +13,9 @@ mkdirSync(PDF_DIR, { recursive: true });
 
 const CHROME = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 
-const JOBS = [
-  ['01-backend-software-engineer.md',   'Abdulwahed-Mansour-Cover-Letter-Backend-Software-Engineer.pdf'],
-  ['02-platform-devops-sre.md',         'Abdulwahed-Mansour-Cover-Letter-Platform-DevOps-SRE.pdf'],
-  ['03-security-appsec-engineer.md',    'Abdulwahed-Mansour-Cover-Letter-Security-AppSec-Engineer.pdf'],
-  ['05-fullstack-web-developer.md',     'Abdulwahed-Mansour-Cover-Letter-Full-Stack-Web-Developer.pdf'],
-  ['04-rust-systems-engineer.md',       'Abdulwahed-Mansour-Cover-Letter-Rust-Systems-Engineer.pdf'],
-  ['06-blockchain-smartcontract.md',    'Abdulwahed-Mansour-Cover-Letter-Blockchain-Smart-Contract.pdf'],
-  ['07-it-support-solutions.md',        'Abdulwahed-Mansour-Cover-Letter-IT-Support-Solutions.pdf'],
-  ['08-technical-writer-translator.md', 'Abdulwahed-Mansour-Cover-Letter-Technical-Writer-Translator.pdf'],
-];
+// Cover-letter sources are archived under cv/archive/cover-letters/ for now.
+// Add entries here (source in cv/cover-letters/) to build a letter.
+const JOBS = [];
 
 marked.setOptions({ gfm: true, breaks: true });
 

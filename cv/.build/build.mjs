@@ -13,16 +13,10 @@ mkdirSync(PDF_DIR, { recursive: true });
 
 const CHROME = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 
-// 6 priority CVs -> output filename
+// Main CV -> output filename. The role-specific CVs are archived under
+// cv/archive/ (add them back here to rebuild them).
 const JOBS = [
-  ['01-backend-software-engineer.md',   'Abdulwahed-Mansour-Backend-Software-Engineer.pdf'],
-  ['02-platform-devops-sre.md',         'Abdulwahed-Mansour-Platform-DevOps-SRE.pdf'],
-  ['03-security-appsec-engineer.md',    'Abdulwahed-Mansour-Security-AppSec-Engineer.pdf'],
-  ['05-fullstack-web-developer.md',     'Abdulwahed-Mansour-Full-Stack-Web-Developer.pdf'],
-  ['04-rust-systems-engineer.md',       'Abdulwahed-Mansour-Rust-Systems-Engineer.pdf'],
-  ['06-blockchain-smartcontract.md',    'Abdulwahed-Mansour-Blockchain-Smart-Contract.pdf'],
-  ['07-it-support-solutions.md',        'Abdulwahed-Mansour-IT-Support-Solutions.pdf'],
-  ['08-technical-writer-translator.md', 'Abdulwahed-Mansour-Technical-Writer-Translator.pdf'],
+  ['main.md', 'Abdulwahed-Mansour-Rust-Engineer.pdf'],
 ];
 
 marked.setOptions({ gfm: true, breaks: true });
