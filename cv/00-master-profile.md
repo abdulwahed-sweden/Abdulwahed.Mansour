@@ -26,8 +26,8 @@ Arabic (native) · English (professional) · Swedish (working — verify level) 
 - 15+ years building software · independent since 2010
 - ~208,000 LOC across 35+ original projects · 5,700+ automated tests
 - **Author of RustIO** — a "Django-for-Rust" web + admin framework (typed core, guided CLI, single-binary deploy, no build step) with real business apps built on it for the Swedish market
-- Security: $98.6M+ vulnerability *class* (ADS) across Aave V4, Morpho Blue, Curve crvUSD · $140K+ confirmed bounties
-- Forensics: traced the $1.5B Bybit/Lazarus theft (42,479 addresses) in 36 seconds
+- Security: discovered a vulnerability *class* (ADS) across Aave V4, Morpho Blue, Curve crvUSD — responsibly disclosed
+- Forensics: traced the Bybit/Lazarus theft (42,479 addresses) in 36 seconds
 - Deployments: AWS, GCP, Azure, Hugging Face Spaces, Base L2 mainnet
 
 ---
@@ -122,7 +122,7 @@ Rust-native red-team platform: scanner, recon, exploitation, 33+ post-exploitati
 
 ### BTC Sentinel — Multi-Chain Forensic Intelligence Platform
 *Rust · Python · Solidity · Tokio · WebSocket · ~20K LOC · 111 tests*
-5 analysis engines (pattern, forensic, clustering, ransomware, mempool oracle) in one statically-linked binary; traced $1.5B Bybit/Lazarus theft (682 tx, 42,479 addresses, 33 clusters) in 36 s; DMM Bitcoin behavioral fingerprinting (10/12 markers); <1 ms mempool detection; 4-phase Aave V3 analysis over 33,827 events.
+5 analysis engines (pattern, forensic, clustering, ransomware, mempool oracle) in one statically-linked binary; traced the Bybit/Lazarus theft (682 tx, 42,479 addresses, 33 clusters) in 36 s; DMM Bitcoin behavioral fingerprinting (10/12 markers); <1 ms mempool detection; 4-phase Aave V3 analysis over 33,827 events.
 
 ### Amend Protocol — Multi-Chain DeFi Vault Ecosystem
 *Solidity 0.8.24 · Rust · Python · TypeScript · Foundry · Anchor · 1,630 tests (incl. 1,000-run fuzz)*
@@ -148,9 +148,9 @@ Self-built multi-CV portfolio site (theming, routing, structured CV data) — de
 ## Security findings table (reuse verbatim)
 | Platform | Target | Finding | Severity |
 |----------|--------|---------|----------|
-| Research | Aave V4 | ADS phantom-yield extraction (~$96M) | Critical |
-| Research | Morpho Blue | ADS invariant violations, 3 types (~$2M) | Critical |
-| Research | Curve crvUSD | ADS fee asymmetry (~$585K) | Critical |
+| Research | Aave V4 | ADS phantom-yield extraction | Critical |
+| Research | Morpho Blue | ADS invariant violations, 3 types | Critical |
+| Research | Curve crvUSD | ADS fee asymmetry | Critical |
 | Immunefi | Moonwell / Mamo | SlippagePriceChecker boundary condition | High |
 | Immunefi | ENS | Gas griefing in `SignatureUtils.sol` (5,928 gas/sig) | Medium |
 | Sherlock | Fluid DEX V2 | Liquidation dust debt → uncloseable positions | Low–Med |

@@ -43,7 +43,7 @@ Architect and sole engineer on Rust-heavy systems: authored the RustIO framework
 - Self-hosted reporting + case-handling for Swedish employers (EU Directive 2019/1937 → lag 2021:890; mandatory at 50+ staff). Report → Case lifecycle → audit overlay, re-auth-gated irreversible identity disclosure; data stays on the employer's own in-country server instead of a third-party SaaS.
 
 **BTC Sentinel — High-Throughput Forensic Engine** · *Rust · Tokio · WebSocket · 111 tests*
-- Single statically-linked binary, zero runtime deps; **20,000 tx/s** pattern analysis, **50,000 addr/s** clustering (Union-Find + taint); type-safe `Sats(u64)` amounts; <1 ms wire-speed mempool detection. Traced the $1.5B Bybit/Lazarus theft (42,479 addresses) in 36 s.
+- Single statically-linked binary, zero runtime deps; **20,000 tx/s** pattern analysis, **50,000 addr/s** clustering (Union-Find + taint); type-safe `Sats(u64)` amounts; <1 ms wire-speed mempool detection. Traced the Bybit/Lazarus theft (42,479 addresses) in 36 s.
 
 **Polaris Chronos — Prayer-Time / Solar-Position Engine** · *Rust 2021 · WASM · 96 tests · live on HF Spaces*
 - High-precision solar engine for every location on Earth incl. polar regions; ships a web dashboard + REST API; compiled to WASM and deployed live on Hugging Face Spaces.

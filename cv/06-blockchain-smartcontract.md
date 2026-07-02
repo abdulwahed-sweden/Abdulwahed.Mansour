@@ -8,7 +8,7 @@ Stockholm, Sweden · +46 76 930 8145 · abdulwahed.mansour@gmail.com
 ---
 
 ## Summary
-Blockchain security engineer working the full DeFi stack — protocol design, smart-contract auditing, and on-chain/MEV systems. I shipped a multi-chain ERC-4626 vault protocol with on-chain invariant verification (1,630 tests), discovered a vulnerability *class* affecting **$98.6M** across Aave V4, Morpho Blue, and Curve crvUSD, and run a production Aave V3 flash-loan liquidation bot on Base mainnet in modern Rust `alloy`. **$140K+ confirmed bounties.** I write contracts the way an auditor reads them: invariants first, fuzzing always, a reproducible PoC for every claim.
+Blockchain security engineer working the full DeFi stack — protocol design, smart-contract auditing, and on-chain/MEV systems. I shipped a multi-chain ERC-4626 vault protocol with on-chain invariant verification (1,630 tests), discovered a vulnerability *class* across Aave V4, Morpho Blue, and Curve crvUSD (responsibly disclosed), and run a production Aave V3 flash-loan liquidation bot on Base mainnet in modern Rust `alloy`. I write contracts the way an auditor reads them: invariants first, fuzzing always, a reproducible PoC for every claim.
 
 ## Technical Skills
 | Area | Technologies |
@@ -24,16 +24,16 @@ Blockchain security engineer working the full DeFi stack — protocol design, sm
 ## Findings
 | Target | Finding | Severity |
 |--------|---------|----------|
-| Aave V4 | ADS phantom-yield extraction (~$96M) | Critical |
-| Morpho Blue | ADS invariant violations, 3 types (~$2M) | Critical |
-| Curve crvUSD | ADS fee asymmetry (~$585K) | Critical |
+| Aave V4 | ADS phantom-yield extraction | Critical |
+| Morpho Blue | ADS invariant violations, 3 types | Critical |
+| Curve crvUSD | ADS fee asymmetry | Critical |
 | Moonwell / Mamo | SlippagePriceChecker boundary condition | High |
 | ENS | Gas griefing in `SignatureUtils.sol` | Medium |
 | Fluid DEX V2 | Liquidation dust debt → uncloseable positions | Low–Med |
 
 ## Experience
 **DeFi Protocol Engineer & Security Researcher** — 2022 – Present · Immunefi / Sherlock / Code4rena · Remote
-Designed/built DeFi protocols and audited live ones across EVM + Solana; discovered the ADS class; $140K+ confirmed bounties.
+Designed/built DeFi protocols and audited live ones across EVM + Solana; discovered the ADS class (responsibly disclosed).
 **Independent Software Engineer** — 2010 – Present · Stockholm
 
 ## Flagship Projects
@@ -44,7 +44,7 @@ Designed/built DeFi protocols and audited live ones across EVM + Solana; discove
 - Production MEV bot: HF velocity prediction, 3-tier × 3-regime gas strategy, dual-shot parallel execution, circuit breaker, Telegram alerting; progressive DRY→SOFT→LIVE deploy.
 
 **BTC Sentinel — On-Chain Forensics & MEV Research** · *Rust · Python · Solidity · 111 tests*
-- 4-phase Aave V3 liquidation analysis (33,827 events); dual-DEX (Uniswap V3 + Aerodrome) atomic liquidation sim; traced the $1.5B Bybit/Lazarus theft (42,479 addresses) in 36 s.
+- 4-phase Aave V3 liquidation analysis (33,827 events); dual-DEX (Uniswap V3 + Aerodrome) atomic liquidation sim; traced the Bybit/Lazarus theft (42,479 addresses) in 36 s.
 
 **Audit Portfolio** · *Foundry · Anchor* — Fluid DEX V2, Moonwell, Folks Finance, Superfluid, LayerZero (Stellar), XRP Ledger, ENS, Curve, Morpho, Aave.
 
