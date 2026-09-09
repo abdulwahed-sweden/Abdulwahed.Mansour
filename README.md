@@ -1,7 +1,8 @@
 # Abdulwahed Mansour — abdulwahed-mansour.dev
 
-Personal site + role-targeted CV system for **Abdulwahed Mansour**, software,
-security & systems engineer in Stockholm, Sweden.
+Personal site for **Abdulwahed Mansour**, Rust software & systems engineer in
+Stockholm, Sweden. The landing page is a static portfolio; `cv/` holds the CV
+sources and PDFs.
 
 Live (when GitHub Pages is enabled): <https://abdulwahed-mansour.dev/> ·
 Svenska: <https://abdulwahed-mansour.dev/sv/>
